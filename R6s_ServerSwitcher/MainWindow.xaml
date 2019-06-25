@@ -1,0 +1,27 @@
+﻿<Window x:Class="R6s_ChangeServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:R6s_ChangeServer"
+        mc:Ignorable="d"
+        Title="Rainbow Six: Siege Server switcher" Height="133" Width="296" ResizeMode="CanMinimize">
+    <Grid>
+        <Button x:Name="SwitchButton" Content="Switch" HorizontalAlignment="Left" Height="54" Margin="171,24,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click"/>
+        <ComboBox x:Name="ComboBox_Server" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="19,40,0,0" SelectedIndex="0" Height="21">
+            <ComboBoxItem Content="Ping Based 預設 " Uid="0"/>
+            <ComboBoxItem Content="EUS 美東" Uid="1"/>
+            <ComboBoxItem Content="CUS 美中" Uid="2"/>
+            <ComboBoxItem Content="SCUS 美中南 " Uid="3"/>
+            <ComboBoxItem Content="WUS 美西" Uid="4"/>
+            <ComboBoxItem Content="SBR 南巴西" Uid="5"/>
+            <ComboBoxItem Content="NEU 北歐" Uid="6"/>
+            <ComboBoxItem Content="WEU 西歐" Uid="7"/>
+            <ComboBoxItem Content="EAS 東亞" Uid="8"/>
+            <ComboBoxItem Content="SEAS 東南亞" Uid="9"/>
+            <ComboBoxItem Content="EAU 東澳洲 " Uid="10"/>
+            <ComboBoxItem Content="WJA 西日本" Uid="11"/>
+        </ComboBox>
+
+    </Grid>
+</Window>
