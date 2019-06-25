@@ -8,19 +8,19 @@
         Title="Rainbow Six: Siege Server switcher" Height="133" Width="296" ResizeMode="CanMinimize">
     <Grid>
         <Button x:Name="SwitchButton" Content="Switch" HorizontalAlignment="Left" Height="54" Margin="171,24,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click"/>
-        <ComboBox x:Name="ComboBox_Server" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="19,40,0,0" SelectedIndex="0" Height="21">
-            <ComboBoxItem Content="Ping Based 預設 " Uid="0"/>
-            <ComboBoxItem Content="EUS 美東" Uid="1"/>
-            <ComboBoxItem Content="CUS 美中" Uid="2"/>
-            <ComboBoxItem Content="SCUS 美中南 " Uid="3"/>
-            <ComboBoxItem Content="WUS 美西" Uid="4"/>
-            <ComboBoxItem Content="SBR 南巴西" Uid="5"/>
-            <ComboBoxItem Content="NEU 北歐" Uid="6"/>
-            <ComboBoxItem Content="WEU 西歐" Uid="7"/>
-            <ComboBoxItem Content="EAS 東亞" Uid="8"/>
-            <ComboBoxItem Content="SEAS 東南亞" Uid="9"/>
-            <ComboBoxItem Content="EAU 東澳洲 " Uid="10"/>
-            <ComboBoxItem Content="WJA 西日本" Uid="11"/>
+        <ComboBox x:Name="ComboBox_Server" HorizontalAlignment="Left" VerticalAlignment="Top" Width="129" Margin="19,40,0,0" SelectedIndex="0" Height="21">
+            <ComboBoxItem Content="Default | Ping Based" Uid="0"/>
+            <ComboBoxItem Content="EUS | US East" Uid="1"/>
+            <ComboBoxItem Content="CUS | US Central" Uid="2"/>
+            <ComboBoxItem Content="SCUS | US South Central " Uid="3"/>
+            <ComboBoxItem Content="WUS | US West" Uid="4"/>
+            <ComboBoxItem Content="SBR | Brazil South" Uid="5"/>
+            <ComboBoxItem Content="NEU | Europe North" Uid="6"/>
+            <ComboBoxItem Content="WEU | Europe West" Uid="7"/>
+            <ComboBoxItem Content="EAS | Asia East" Uid="8"/>
+            <ComboBoxItem Content="SEAS | Asia South East" Uid="9"/>
+            <ComboBoxItem Content="EAU | Australia East" Uid="10"/>
+            <ComboBoxItem Content="WJA | Japan West" Uid="11"/>
         </ComboBox>
 
     </Grid>
