@@ -19,7 +19,7 @@ namespace R6s_ChangeServer {
     /// MainWindow.xaml 的互動邏輯
     /// </summary>
     public partial class MainWindow : Window {
-        readonly string[] areas = { "default", "eus", "cus", "scus", "wus", "sbr", "neu", "weu", "eas", "seas", "eau", "wja" };
+        readonly string[] areas = { "default (ping based)", "eastus", "centralus", "southcentralus", "westus", "brazilsouth", "northeurope", "westeurope", "southafricanorth", "eastasia", "southeastasia", "australiaeast", "australiasoutheast", "japanwest" };
         string url_document;
         string[] directories;
 
@@ -46,14 +46,13 @@ namespace R6s_ChangeServer {
         private void switchArea(int uid) {
             foreach (string dir in directories) {
                 string url = dir + "\\GameSettings.ini";
-                if (!checkIfFileExist(url)) { continue; }
-                editGameSettings(url, uid);
+                if (checkIfFileExist(url)) editGameSettings(url, uid); 
             }
         }
 
         private Boolean checkIfFileExist(string url) {
             if (!File.Exists(url)) {
-                Console.WriteLine("GameSettings.ini does not exist!!");
+                MessageBox.Show("GameSettings.ini does not exist!!");
                 return false;
             }
             return true;
@@ -63,11 +62,8 @@ namespace R6s_ChangeServer {
             string[] contentInGameSetting;
             int length = 14;
             contentInGameSetting = File.ReadAllLines(url);
-            for (byte i = 1; i < contentInGameSetting.Length; i++) {
-
-                if (contentInGameSetting[contentInGameSetting.Length - i].Length <= 10) {
-                    continue;
-                } else {
+            for (byte i = 1; i < contentInGameSetting.Length; ++i) {
+                if(contentInGameSetting[contentInGameSetting.Length - i].Length > 10) {
                     string lineString = contentInGameSetting[contentInGameSetting.Length - i].Substring(0, length);
                     if (lineString == "DataCenterHint") {
                         contentInGameSetting[contentInGameSetting.Length - i] = "DataCenterHint=" + areas[uid];

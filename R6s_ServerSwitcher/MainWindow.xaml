@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:R6s_ChangeServer"
         mc:Ignorable="d"
-        Title="Rainbow Six: Siege Server switcher" Height="133" Width="296" ResizeMode="CanMinimize">
+        Title="Rainbow Six: Siege Server switcher" Height="133" Width="318.5" ResizeMode="CanMinimize">
     <Grid>
-        <Button x:Name="SwitchButton" Content="Switch" HorizontalAlignment="Left" Height="54" Margin="171,24,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click"/>
-        <ComboBox x:Name="ComboBox_Server" HorizontalAlignment="Left" VerticalAlignment="Top" Width="129" Margin="19,40,0,0" SelectedIndex="0" Height="21">
+        <Button x:Name="SwitchButton" Content="Switch" HorizontalAlignment="Left" Height="54" Margin="190,23,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click"/>
+        <ComboBox x:Name="ComboBox_Server" HorizontalAlignment="Left" VerticalAlignment="Top" Width="147" Margin="19,40,0,0" SelectedIndex="0" Height="21">
             <ComboBoxItem Content="Default | Ping Based" Uid="0"/>
             <ComboBoxItem Content="EUS | US East" Uid="1"/>
             <ComboBoxItem Content="CUS | US Central" Uid="2"/>
@@ -17,11 +17,12 @@
             <ComboBoxItem Content="SBR | Brazil South" Uid="5"/>
             <ComboBoxItem Content="NEU | Europe North" Uid="6"/>
             <ComboBoxItem Content="WEU | Europe West" Uid="7"/>
-            <ComboBoxItem Content="EAS | Asia East" Uid="8"/>
-            <ComboBoxItem Content="SEAS | Asia South East" Uid="9"/>
-            <ComboBoxItem Content="EAU | Australia East" Uid="10"/>
-            <ComboBoxItem Content="WJA | Japan West" Uid="11"/>
+            <ComboBoxItem Content="SAN | South Africa North" Uid ="8" />
+            <ComboBoxItem Content="EAS | Asia East" Uid="9"/>
+            <ComboBoxItem Content="SEAS | Asia South East" Uid="10"/>
+            <ComboBoxItem Content="EAU | Australia East" Uid="11"/>
+            <ComboBoxItem Content="SEAU | Australia Southeast" Uid="12" />
+            <ComboBoxItem Content="WJA | Japan West" Uid="13"/>
         </ComboBox>
-
     </Grid>
 </Window>
