@@ -1,23 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 namespace R6s_ChangeServer {
-    /// <summary>
-    /// MainWindow.xaml 的互動邏輯
-    /// </summary>
     public partial class MainWindow : Window {
         readonly string[] areas = { "default (ping based)", "eastus", "centralus", "southcentralus", "westus", "brazilsouth", "northeurope", "westeurope", "southafricanorth", "eastasia", "southeastasia", "australiaeast", "australiasoutheast", "japanwest" };
         string url_document;
@@ -46,7 +30,7 @@ namespace R6s_ChangeServer {
         private void switchArea(int uid) {
             foreach (string dir in directories) {
                 string url = dir + "\\GameSettings.ini";
-                if (checkIfFileExist(url)) editGameSettings(url, uid); 
+                if (checkIfFileExist(url)) editGameSettings(url, uid);
             }
         }
 
@@ -62,8 +46,9 @@ namespace R6s_ChangeServer {
             string[] contentInGameSetting;
             int length = 14;
             contentInGameSetting = File.ReadAllLines(url);
+
             for (byte i = 1; i < contentInGameSetting.Length; ++i) {
-                if(contentInGameSetting[contentInGameSetting.Length - i].Length > 10) {
+                if (contentInGameSetting[contentInGameSetting.Length - i].Length > 10) {
                     string lineString = contentInGameSetting[contentInGameSetting.Length - i].Substring(0, length);
                     if (lineString == "DataCenterHint") {
                         contentInGameSetting[contentInGameSetting.Length - i] = "DataCenterHint=" + areas[uid];
