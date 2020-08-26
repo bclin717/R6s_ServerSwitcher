@@ -3,6 +3,7 @@ using System.IO;
 using System.Windows;
 namespace R6s_ChangeServer {
     public partial class MainWindow : Window {
+        string prefix = "playfab/";
         readonly string[] areas = { "default (ping based)", "eastus", "centralus", "southcentralus", "westus", "brazilsouth", "northeurope", "westeurope", "southafricanorth", "eastasia", "southeastasia", "australiaeast", "australiasoutheast", "japanwest" };
         string url_document;
         string[] directories;
@@ -51,7 +52,7 @@ namespace R6s_ChangeServer {
                 if (contentInGameSetting[contentInGameSetting.Length - i].Length > 10) {
                     string lineString = contentInGameSetting[contentInGameSetting.Length - i].Substring(0, length);
                     if (lineString == "DataCenterHint") {
-                        contentInGameSetting[contentInGameSetting.Length - i] = "DataCenterHint=" + areas[uid];
+                        contentInGameSetting[contentInGameSetting.Length - i] = "DataCenterHint=" + prefix + areas[uid];
                         File.WriteAllLines(url, contentInGameSetting);
                         break;
                     }
